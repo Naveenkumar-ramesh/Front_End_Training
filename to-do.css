@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.top {
+  background-color: #2564cf;
+  color: white;
+  width:100%;
+  height:50px;
+}
+
+.app-launcher {
+  display: inline-block;
+  padding: 10px;
+}
+
+.app-launcher:hover {
+  background-color: #0843aac7;
+}
+
+.name {
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px;
+  font-size: 22px;
+}
+
+.search {
+  display: inline-block;
+  width: 346px;
+  height: 32px;
+  background-color: #faf9f8;
+  border-radius: 3px;
+  margin-left: 330px;
+  margin-right: 300px;
+}
+
+.search:hover {
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+.search .search-left {
+  display: inline-block;
+  font-size: 20px;
+  vertical-align: middle;
+  margin-left: 6px;
+  color: #2564CF;
+}
+
+.search .search-middle {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+.search .search-middle input {
+  border: 0px;
+  background-color: transparent;
+  width: 270px;
+  height: 27px;
+  outline: none;
+}
+
+.search .search-middle input::placeholder {
+  color: transparent;
+}
+
+.search .search-middle input:focus::placeholder {
+  color: grey;
+  font-size: 16px;
+  border: transparent;
+}
+
+.search .search-right {
+  display: inline-block;
+  font-size: 24px;
+  vertical-align: middle;
+  margin-left: 6px;
+  color: #2564CF;
+}
+
+.settings, .help, .megaphone, .user {
+  padding: 12px;
+  display: inline-block;
+}
+
+.settings:hover, .help:hover, .megaphone:hover, .user:hover {
+  background-color: #0843aac7;
+}
+
+.navigation i {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding: 10px;
+}
+
+.left-side {
+  display: inline-block;
+  width: 22%;
+}
+
+.left-side .navigation {
+  font-size: 1.3em;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.left-side .left-content {
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+.left-side .left-content:hover {
+  background-color: #f5f5f5;
+}
+
+.left-content .left-icon {
+  display: inline-block;
+  padding: 10px;
+  padding-right: 20px;
+}
+
+.left-content .left-name {
+  display: inline-block;
+}
+
+.left-content .left-item {
+  display: inline-block;
+}
+
+hr {
+  width: 270px;
+  margin-left: 12px;
+  margin-top: 12px;
+  border-top: 1px solid grey;
+}
+
+.left-side .new-list {
+  display: inline-block;
+  padding: 10px;
+  padding-left: 0px;
+  padding-top: 0px;
+  color: #2564cf;
+}
+
+.left-side ul {
+  padding: 10px;
+  list-style: none;
+}
+
+.left-side ul li i {
+  padding: 10px;
+  padding-left: 0px;
+  font-size: large;
+}
+
+.left-side ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: large;
+  padding-left: 20px;
+  color: black;
+}
+
+.left-side ul li:hover {
+  background-color: #f5f5f5;
+}
+
+.new-list .list-left {
+  display: inline-block;
+}
+
+.new-list i {
+  padding: 10px;
+}
+
+.new-list .list-icon {
+  display: inline-block;
+  padding: 10px;
+  padding-right: 0px;
+}
+
+.new-list .list-name {
+  display: inline-block;
+  height: 20px;
+}
+
+.new-list .list-name input {
+  border: 0px none;
+  outline: none;
+  width: 150px;
+  height: 50px;
+}
+
+.list-name input::placeholder {
+  color: #2564CF;
+  font-size: larger;
+}
+
+.list-name input {
+  border: 0px;
+  outline: none;
+  width: 155px;
+  height: 20px;
+  padding-left: 16px;
+}
+
+.add-list:hover,
+.add-list input:hover,
+.list-symbol:hover {
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+.list-symbol {
+  padding: 15px;
+  display: inline-block;
+}
+
+.left-bottom {
+  position: fixed;
+  bottom: 0;
+}
+
+.left-bottom div:hover {
+  background-color: #f5f5f5;
+}
+
+.left-bottom div {
+  display: inline-block;
+}
+
+.left-bottom i {
+  padding: 20px;
+}
+
+.left-bottom .check {
+  color: #2564CF;
+}
+
+.right-side {
+  display: inline-block;
+  vertical-align: top;
+  width: 77.6%;
+  height: 605px;
+  background-color: rgba(128, 128, 128, 0.048);
+}
+
+.right-side .day-content {
+  padding: 20px;
+}
+
+.right-side .day-icon {
+  display: inline-block;
+  padding: 10px;
+}
+
+.right-side .day-name {
+  display: inline-block;
+  padding: 10px;
+}
+
+.right-side .day-symbol {
+  display: inline-block;
+  padding: 10px;
+}
+
+.day-content {
+  display: inline-block;
+}
+
+.middle-right {
+  display: inline-block;
+  padding: 20px;
+  margin-left: 570px;
+  vertical-align: top;
+}
+
+.middle-right .sort,
+.middle-right .suggession {
+  display: inline-block;
+  padding: 15px;
+}
+
+.middle-right .sort:hover,
+.middle-right .suggession:hover {
+  background-color: white;
+}
+
+.middle-right .sort .sort-icon ,
+.middle-right .sort .sort-name ,
+.middle-right .suggession .suggession-icon ,
+.middle-right .suggession .suggession-name {
+  display: inline-block;
+}
+
+.add-task {
+  width: 980px;
+  height: 52px;
+  margin-left: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0.5px 1px 2px 0.5px gray;
+}
+
+.add-task .new-task {
+  display: inline-block;
+}
+
+.add-task .new-task input {
+  width: 890px;
+  height: 34px;
+  padding: 10px 10px 10px 10px;
+  background-color: transparent;
+  border: 0px;
+  outline: none;
+  font-size: 18px;
+  vertical-align: top;
+}
+
+.add-task .new-task input::placeholder {
+  color: #2564CF;
+  font-size: 16px;
+}
+
+.add-task .add-task-icon {
+  display: inline-block;
+  color: #2564CF;
+  vertical-align: top;
+  padding: 16px;
+}
+
+.add-task ul {
+  padding-top: 10px;
+  list-style: none;
+}
+
+.add-task ul li {
+  width: 940px;
+  height: 20px;
+  padding: 15px;
+  font-size: large;
+  border: 1px solid  gray;
+  box-shadow: 0.5px 1px 2px 0.5px gray;
+  margin: 8px;
+  background-color: white;
+}
+
+.add-task ul li:hover{
+  background-color: rgba(128, 128, 128, 0.048);
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="to-do.css">
+    <script src="https://kit.fontawesome.com/c05f39e131.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="top">
+         <div class="app-launcher">
+            <i class="material-icons">&#xe5c3;</i>
+         </div>
+         <div class="name">
+            <p>To Do</p>
+         </div>
+         <div class="search">
+            <div class="search-left">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="search-middle">
+                <input type="text" placeholder="Search">
+            </div>    
+            <div class="search-right">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+         <div class="settings">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+         </div>
+         <div class="help">
+            <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="megaphone">
+            <i class="fa-solid fa-bullhorn"></i>
+        </div>
+        <div class="user">
+            <i class="fa-regular fa-circle-user"></i>
+        </div>
+    </div>
+    <div class="left-side">
+        <div class="navigation">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="left-content">
+            <div class="left-icon">
+                <i class="fa-regular fa-sun"></i>
+            </div>
+            <div class="left-item">
+                <p>My Day</p>
+            </div>
+        </div>
+        <div class="left-content">
+            <div class="left-icon">
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="left-item">
+                <p>Important</p>
+            </div>
+        </div>
+        <div class="left-content">
+            <div class="left-icon">
+                <i class="fa-regular fa-calendar"></i>
+            </div>
+            <div class="left-item">
+                <p>Planned</p>
+            </div>
+        </div>
+        <div class="left-content">
+            <div class="left-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="left-item">
+                <p>Assigned to me</p>
+            </div>
+        </div>
+        <div class="left-content">
+            <div class="left-icon">
+                <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="left-item">
+                <p>Tasks</p>
+            </div>
+        </div>
+        <hr>
+        <div class="new-list">
+            <div class="add-list">
+                <div class="list-icon">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="list-name">
+                    <input type="text" id="to-do-name" placeholder="New list">
+                </div>
+            </div>
+        </div>
+        <div class="list-symbol">
+            <i class="fa-solid fa-user-plus"></i>
+        </div>
+        <ul id="to-do-list" class="to-do-list"></ul>
+        <div class="left-bottom">
+            <div class="mail">
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="calender">
+                <i class="fa-regular fa-calendar"></i>
+            </div>
+            <div class="people">
+                <i class="fa-solid fa-user-group"></i>
+            </div>
+            <div class="files">
+                <i class="fa-solid fa-paperclip"></i>
+            </div>
+            <div class="check">
+                <i class="fa-solid fa-check"></i>
+            </div>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="day-content">
+            <div class="day-icon">
+                <i class="fa-regular fa-sun"></i>
+            </div>
+            <div class="day-name">
+                <p>My Day</p>
+            </div>
+            <div class="day-symbol">
+                <i class="fa fa-ellipsis-h"></i>
+            </div>
+            <div class="date">
+                <p id="current-date"></p>
+            </div>
+        </div>
+        <div class="middle-right">
+            <div class="sort">
+                <div class="sort-icon">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                </div>
+                <div class="sort-name">
+                    <p>Sort</p>
+                </div>
+            </div>
+            <div class="suggession">
+                <div class="suggession-icon">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                </div>
+                <div class="suggession-name">
+                    <p>Suggession</p>
+                </div>
+            </div>
+        </div>
+        <div class = "add-task">
+            <div class="add-task-icon">
+                <i class="fa-regular fa-circle"></i>
+            </div>
+            <div class="new-task">
+                <input type="text" id="to-do-add-task" placeholder="Add a task">
+            </div>
+            <ul id="to-do-task" class="to-do-task"></ul>
+        </div>
+    </div>
+    <script src="to-do.js"></script>
+</body>
+
+</html>
