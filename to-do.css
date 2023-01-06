@@ -261,6 +261,7 @@ hr {
 }
 
 .right-side .day-content {
+  width: 65%;
   display: inline-block;
   padding: 20px;
 }
@@ -289,7 +290,7 @@ hr {
 .middle-right {
   display: inline-block;
   padding: 20px;
-  margin-left: 555px;
+  width: 25%;
   vertical-align: top;
 }
 
