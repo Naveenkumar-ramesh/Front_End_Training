@@ -8,7 +8,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.top {
+.top-container {
   background-color: #2564cf;
   color: white;
   width:100%;
@@ -96,14 +96,14 @@ body {
 }
 
 .navigation i {
-  padding-top: 20px;
-  padding-bottom: 20px;
   padding: 10px;
+  padding-top: 20px;
 }
 
 .left-side {
   display: inline-block;
   width: 22%;
+  height: 550px;
 }
 
 .left-side .navigation {
@@ -144,15 +144,13 @@ hr {
 
 .left-side .new-list {
   display: inline-block;
-  padding: 10px;
-  padding-left: 0px;
-  padding-top: 0px;
+  padding-bottom: 10px;
   color: #2564cf;
 }
 
 .left-side ul {
-  padding: 10px;
   list-style: none;
+  /* overflow-y: auto; */
 }
 
 .left-side ul li i {
@@ -171,6 +169,11 @@ hr {
 
 .left-side ul li:hover {
   background-color: #f5f5f5;
+}
+
+.left-side {
+  overflow: hidden;
+	overflow-y: scroll;
 }
 
 .new-list .list-left {
@@ -224,6 +227,10 @@ hr {
   display: inline-block;
 }
 
+.list-symbol i{
+  color: #2564CF;
+}
+
 .left-bottom {
   position: fixed;
   bottom: 0;
@@ -254,7 +261,13 @@ hr {
 }
 
 .right-side .day-content {
+  display: inline-block;
   padding: 20px;
+}
+
+.date {
+  padding-left: 20px;
+  font-size: 12px;
 }
 
 .right-side .day-icon {
@@ -263,6 +276,7 @@ hr {
 }
 
 .right-side .day-name {
+  font-size: 20px;
   display: inline-block;
   padding: 10px;
 }
@@ -272,14 +286,10 @@ hr {
   padding: 10px;
 }
 
-.day-content {
-  display: inline-block;
-}
-
 .middle-right {
   display: inline-block;
   padding: 20px;
-  margin-left: 570px;
+  margin-left: 555px;
   vertical-align: top;
 }
 
@@ -306,7 +316,8 @@ hr {
   height: 52px;
   margin-left: 20px;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   box-shadow: 0.5px 1px 2px 0.5px gray;
 }
 
@@ -355,4 +366,81 @@ hr {
 
 .add-task ul li:hover{
   background-color: rgba(128, 128, 128, 0.048);
+}
+
+.base-add-task {
+  width:980px;
+  height:52px;
+  color: rgba(128, 128, 128, 0.671);
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: #fAf9f8;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0.4px 1px 2px 0.5px grey;
+}
+
+.base-add-task .base-task-icons {
+  padding: 10px 16px;
+  display: inline-block;
+}
+
+.base-add-task .base-task-icons > div {
+  display: inline-block;
+  text-align: center;
+  width:28px;
+  height:28px;
+  padding: 4px;
+}
+
+.base-add-task .base-task-icons > div:hover {
+  background-color: #ffffff;
+}
+
+.base-add-task .add-button {
+  display: inline-block;
+  width: 37px;
+  height: 30px;
+  margin-left: 730px;
+  text-align: center;
+  border: 1px solid #e1dfdd;
+}
+
+.base-add-task .add-button button {
+  width: 37px;
+  height: 30px;
+  border: 0px;
+  background-color: #ffffff;
+  color: rgba(128, 128, 128, 0.671);
+}
+
+#to-do-task {
+  width: 100%;
+  height:355px;
+  overflow-y: auto;
+  padding-top: 8px;
+}
+
+.add-task-bar {
+  width: 90%;
+  height:45px;
+  background-color: rgba(128, 128, 128, 0.671);
+  margin-left: 20px;
+  margin-bottom: 15px;
+  background-color: #fAf9f8;
+  border-radius: 5px;
+  box-shadow: 0.4px 1px 2px 0.5px grey;
+}
+
+.add-task-bar .pretext,
+.add-task-bar .posttext {
+  color: #2564CF;
+  display: inline-block;
+  padding: 10px 16px;
+  display: inline-block;
+}
+
+.add-task-bar .new-task {
+  width: 87%;
+  display: inline-block;
 }
