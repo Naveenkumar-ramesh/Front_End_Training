@@ -1,5 +1,3 @@
-// (function () {
-
   const toDoTask = getElementById("to-do-add-task");
   const tasklist = getElementById("task-list");
   const taskContainer = getElementById("to-do-task");
@@ -7,6 +5,14 @@
   const list = getElementById("to-do-list");
   const categoryName = getElementById("day-name");
   const categoryIcon = getElementById("day-icon");
+  const navigator = getElementById("toggle-menu");
+  const icon = '<i class="fa-solid fa-bars"></i>';
+  const leftcontainer = getElementById("left-side");
+  const middleContainer = getElementById("right-side");
+  const selectedTask = document.getElementsByClassName("add-task-bar");
+  const taskRight = getElementById("task-right");
+  const taskTitle = getElementById("add-step-task-name");
+  let taskRevert = getElementById("task-revert");
   let choosenCategory = document.getElementsByClassName("left-content");
 
   const category = [{ id: '1', name: 'My Day', icon: '<i class="fa-regular fa-sun"></i>' },
@@ -94,36 +100,52 @@
     getTask();
   }
 
-
   function eventListener() {
+ 
     toDoName.addEventListener("keypress", addCategory);
     toDoTask.addEventListener("keypress", addTask);
+    navigator.addEventListener("click", hideMenu);
+    taskRevert.addEventListener("click", revertTask);
+    categoryIcon.addEventListener("click", revertLeft);
 
-    // for (i = 0; i < category.length; i++) {
-    //   console.log(choosenCategory[i]);
-    //   choosenCategory[i].addEventListener("click", taskBar);
-    // }
+    for (let index = 0; index < tasks.length; index++) {
+      selectedTask[index].addEventListener("click", showTask);
+    }
   }
 
-  // function taskBar(event) {
-  //   if (event == null) {
-  //     categoryName.innerHTML = category[0].name;
-  //     categoryIcon.innerHTML = category[0].icon;
-  //     selectedCategory = category[0];
-  //     console.log(selectedCategory);
-  //     getTask();
-  //   } else {
-  //     for (let i = 0; i < category.length; i++) {
-  //       if (event.target.id == category[i].id) {
-  //         console.log(category[i]);
-  //         categoryName.innerHTML = category[i].name;
-  //         categoryIcon.innerHTML =  category[i].icon;
-  //         selectedCategory = category[i];
-  //         getTask();
-  //       }
-  //     }
-  //   }
-  // }
+  function hideMenu() {
+    leftcontainer.classList.remove("left-side");
+    leftcontainer.classList.add("left-side-hide");
+    middleContainer.classList.add("right-side-hide");
+    var dayIcon = getElementById("day-icon");
+    dayIcon.innerHTML = icon;
+  }
+
+  function showTask(event) {
+    var rightContainer = getElementById("right-side");
+    rightContainer.classList.add("right-side-show-task");
+    for (let index = 0; index < tasks.length; index++) {
+      console.log(tasks[index].id);
+      console.log(event.currentTarget.id);
+      if (event.currentTarget.id == (tasks[index].id)-1) {
+        taskTitle.innerHTML = tasks[index].name;
+      }
+    }
+    taskRight.classList.remove('task-right');
+    taskRight.classList.add('task-right-show');
+  }
+
+  function revertTask() {
+    var rightContainer = getElementById("right-side");
+    rightContainer.classList.remove('right-side-show-task');
+    taskRight.classList.add('task-right');
+  }
+
+  function revertLeft() {
+
+    leftcontainer.classList.remove("left-side-hide");
+    middleContainer.classList.remove("right-side-hide");
+  }
 
   function getTask() {
     taskContainer.innerHTML = "";
@@ -136,6 +158,7 @@
         const texts = createElement("div");
         texts.className = "new-task";
         const addTask = createElement("div");
+        addTask.setAttribute("id", i);
         addTask.className = "add-task-bar";
         pretext.innerHTML = '<i class="fa-regular fa-circle"></i>';
         texts.innerHTML = tasks[i].name;
@@ -155,6 +178,7 @@
       let taskId = tasks.length + 1;
       tasks.push({id: taskId++ , name: text, categoryId: selectedCategory.id});
       getTask();
+      eventListener();
       text.value = "";
     }
   }
@@ -168,4 +192,25 @@
   }
 
   init();
-// })();
+
+
+  
+  // function taskBar(event) {
+  //   if (event == null) {
+  //     categoryName.innerHTML = category[0].name;
+  //     categoryIcon.innerHTML = category[0].icon;
+  //     selectedCategory = category[0];
+  //     console.log(selectedCategory);
+  //     getTask();
+  //   } else {
+  //     for (let i = 0; i < category.length; i++) {
+  //       if (event.target.id == category[i].id) {
+  //         console.log(category[i]);
+  //         categoryName.innerHTML = category[i].name;
+  //         categoryIcon.innerHTML =  category[i].icon;
+  //         selectedCategory = category[i];
+  //         getTask();
+  //       }
+  //     }
+  //   }
+  // }

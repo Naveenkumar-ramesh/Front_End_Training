@@ -10,27 +10,27 @@
 
 <body>
     <div class="top-container">
-         <div class="app-launcher">
+        <div class="app-launcher">
             <i class="material-icons">&#xe5c3;</i>
-         </div>
-         <div class="name">
+        </div>
+        <div class="name">
             <p>To Do</p>
-         </div>
-         <div class="search">
+        </div>
+        <div class="search">
             <div class="search-left">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="search-middle">
                 <input type="text" placeholder="Search">
-            </div>    
+            </div>
             <div class="search-right">
                 <i class="fa-solid fa-xmark"></i>
             </div>
         </div>
-         <div class="settings">
+        <div class="settings">
             <i class="fa fa-cog" aria-hidden="true"></i>
-         </div>
-         <div class="help">
+        </div>
+        <div class="help">
             <i class="fa-solid fa-question"></i>
         </div>
         <div class="megaphone">
@@ -40,47 +40,49 @@
             <i class="fa-regular fa-circle-user"></i>
         </div>
     </div>
-    <div class="left-side">
+    <div class="left-side" id="left-side">
         <div class="navigation">
-            <i class="fa-solid fa-bars"></i>
+            <button class="toggle-menu" id="toggle-menu"><i class="fa-solid fa-bars"></i></button>
         </div>
         <div class="left-menu">
             <div id="task-list"></div>
             <hr>
             <ul id="to-do-list" class="to-do-list"></ul>
-            <div class="new-list">
-                <div class="add-list">
-                    <div class="list-icon">
-                        <i class="fa-solid fa-plus"></i>
+            <div class="list-container">
+                <div class="inside-container">
+                    <div class="height-container">
+                        <div class="list-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="list-name">
+                            <input type="text" id="to-do-name" placeholder="New list">
+                        </div>
+                        <div class="list-symbol">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
                     </div>
-                    <div class="list-name">
-                        <input type="text" id="to-do-name" placeholder="New list">
-                    </div>
-                </div>
-            </div>
-            <div class="list-symbol">
-                <i class="fa-solid fa-user-plus"></i>
-            </div>
-            <div class="left-bottom">
-                <div class="mail">
-                    <i class="fa-regular fa-envelope"></i>
-                </div>
-                <div class="calender">
-                    <i class="fa-regular fa-calendar"></i>
-                </div>
-                <div class="people">
-                    <i class="fa-solid fa-user-group"></i>
-                </div>
-                <div class="files">
-                    <i class="fa-solid fa-paperclip"></i>
-                </div>
-                <div class="check">
-                    <i class="fa-solid fa-check"></i>
                 </div>
             </div>
         </div>
+        <div class="left-bottom">
+            <div class="mail">
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="mail">
+                <i class="fa-regular fa-calendar"></i>
+            </div>
+            <div class="mail">
+                <i class="fa-solid fa-user-group"></i>
+            </div>
+            <div class="mail">
+                <i class="fa-solid fa-paperclip"></i>
+            </div>
+            <div class="mail" id="tick">
+                <i class="fa-solid fa-check"></i>
+            </div>
+        </div>
     </div>
-    <div class="right-side">
+    <div class="right-side" id="right-side">
         <div class="day-content">
             <div class="day-icon" id="day-icon">
                 <i class="fa-regular fa-sun"></i>
@@ -114,7 +116,7 @@
             </div>
         </div>
 
-        <div class = "add-task">
+        <div class="add-task">
             <div class="add-task-icon">
                 <i class="fa-regular fa-circle"></i>
             </div>
@@ -124,22 +126,109 @@
         </div>
 
         <div id="base-add-task" class="base-add-task">
-            <div class = "base-task-icons">
-                <div class = "base-task-icon">
+            <div class="base-task-icons">
+                <div class="base-task-icon">
                     <i class="fa-solid fa-calendar-days"></i>
                 </div>
-                <div class = "base-task-icon">
+                <div class="base-task-icon">
                     <i class="fa-regular fa-bell"></i>
                 </div>
-                <div class = "base-task-icon">
-                    <i class="fa-solid fa-repeat"></i> 
-                </div>  
+                <div class="base-task-icon">
+                    <i class="fa-solid fa-repeat"></i>
+                </div>
             </div>
             <div class="add-button">
                 <button>Add</button>
             </div>
         </div>
         <div id="to-do-task"></div>
+    </div>
+    <div class="task-right" id="task-right">
+        <div class="task-top">
+            <div class="add-step-task">
+                <div class = "add-step-task-icon">
+                    <i class="fa-regular fa-circle"></i>
+                </div>  
+                <div class = "add-step-task-name" id="add-step-task-name"></div> 
+                <div class = "add-step-task-icon">
+                    <i class="fa-regular fa-star"></i>
+                </div> 
+            </div>
+            <div class="add-step">
+                <div class = "add-step-icon">
+                    <i class="fa-regular fa-circle"></i>
+                </div>  
+                <div class = "add-step-name">
+                    <p>Add Step</p>
+                </div> 
+            </div>
+        </div>
+        <div class = "added-to-task">
+            <div class="added-to-task-icon">
+                <i class="fa-regular fa-sun"></i>
+            </div>
+            <div class="added-to-task-text">
+                <p>Added to Task</p>
+            </div>
+        </div>  
+        <div class="task-middle">
+            <div class="task-middle-content">
+                <div class="task-middle-content-icon">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+                <div class="task-middle-content-text">
+                    <p>Render Me</p>
+                </div>
+            </div>
+            <div class="task-middle-content">
+                <div class="task-middle-content-icon">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div class="task-middle-content-text">
+                    <p>Add Due Date</p>
+                </div>
+            </div>
+            <div class="task-middle-content">
+                <div class="task-middle-content-icon">
+                    <i class="fa-solid fa-repeat"></i>
+                </div>
+                <div class="task-middle-content-text">
+                    <p>Repeat</p>
+                </div>
+            </div>
+        </div>
+        <div class="task-lower">
+            <div class="task-lower-content">
+                <div class="task-lower-content-icon">
+                    <i class="fa-solid fa-tag"></i>
+                </div>
+                <div class="task-lower-content-text">
+                    <p>Pick a Category</p>
+                </div>
+            </div>
+            <div class="task-lower-content">
+                <div class="task-lower-content-icon">
+                    <i class="fa-solid fa-paperclip"></i>
+                </div>
+                <div class="task-lower-content-text">
+                    <p>Add File</p>
+                </div>
+            </div>
+        </div>
+        <div class="add-note">
+            Add Note
+        </div>
+        <div class="task-bottom">
+            <div class="task-revert"  id="task-revert">
+                <i class="fa-solid fa-repeat"></i> 
+            </div>
+            <div class="task-record">
+                Created Today
+            </div>
+            <div class="task-delete">
+                <i class="fa-solid fa-repeat"></i> 
+            </div>
+        </div>
     </div>
     <script src="to-do.js"></script>
 </body>
